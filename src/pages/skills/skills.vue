@@ -8,5 +8,5 @@
 
 <style type="text/stylus" lang='stylus' rel='stylesheet/stylus' scoped>
   .skills
-    background: #516395;
+    //background: rgb(220, 247, 161);
 </style>

@@ -8,5 +8,5 @@
 
 <style type="text/stylus" lang='stylus' rel='stylesheet/stylus' scoped>
   .projects
-    background: radial-gradient(ellipse farthest-corner, #FFFFFF, #EEEEEE);
+    //background: rgb(217, 179, 230)
 </style>

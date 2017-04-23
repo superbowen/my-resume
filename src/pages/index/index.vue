@@ -10,7 +10,8 @@
 
 <style type="text/stylus" lang='stylus' rel='stylesheet/stylus' scoped>
   .index
-    background: radial-gradient(ellipse farthest-corner, #FFFFFF, #EEEEEE);
+    //background: rgb(129, 194, 214)
+
 
   /*display: flex
   flex-direction: column

@@ -8,5 +8,5 @@
 
 <style type="text/stylus" lang='stylus' rel='stylesheet/stylus' scoped>
   .intros
-    background: #516395;
+    //background: rgb(129, 146, 214);
 </style>

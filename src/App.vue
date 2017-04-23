@@ -1,7 +1,11 @@
 <template>
   <div id="app">
 
-    <swiper :options="swiperOption" style="width: 100%;height: 100%;">
+    <div class="bg" id="bg">
+      <img src="../static/bg.jpg" alt="a cool bg" width="1920" height="1638">
+    </div>
+
+    <swiper :options="swiperOption" class="swiper-box">
 
       <swiper-slide>
         <index></index>
@@ -10,12 +14,11 @@
         <intros></intros>
       </swiper-slide>
       <swiper-slide>
-        <projects></projects>
-      </swiper-slide>
-      <swiper-slide>
         <skills></skills>
       </swiper-slide>
-
+      <swiper-slide>
+        <projects></projects>
+      </swiper-slide>
       <div class="swiper-pagination" slot="pagination"></div>
 
     </swiper>
@@ -32,6 +35,7 @@
     name: 'app',
     data() {
       return {
+        CurrentIndex: 1,
         swiperOption: {
           pagination: '.swiper-pagination',
           direction: 'vertical',
@@ -41,11 +45,16 @@
           keyboardControl: true,
           mousewheelControl: true,
           speed: 700,
-          loop: true
+//          loop: true,
+          onTransitionStart(swiper) {
+            this.CurrentIndex = swiper.activeIndex
+//            console.log(document.getElementById('bg'))
+//            console.log(this.$refs.bg)
+            document.getElementById('bg').style.top = -this.CurrentIndex * 130 - 300 + 'px'
+          }
         }
       }
     },
-
     components: {
       index, intros, projects, skills
     }
@@ -53,7 +62,7 @@
 </script>
 
 <style>
-  html,body {
+  html, body {
     position: relative;
     height: 100%;
   }
@@ -64,16 +73,48 @@
     -moz-osx-font-smoothing: grayscale;
     font-size: 10px;
     height: 100%;
+    /*color: #fff;*/
+  }
+
+  #bg {
+    position: fixed;
+    top: -300px;
+    right: 0;
+    transition: all .7s
+  }
+  @media only screen and (max-width:1200px) {
+    #bg {
+      transform: scale(1.5);
+      right: -100px;
+    }
   }
 
   ::-webkit-scrollbar {
     display: none;
   }
 
-  .swiper-pagination{
-    right: 20px !important;
-    transform: scale(2) translate3d(0px, -50%, 0) !important;
+  .swiper-box {
+    width: 100%;
+    height: 100%;
   }
+
+  .swiper-pagination {
+    right: 20px !important;
+  }
+
+  .swiper-pagination-bullet {
+    width: 1.2rem !important;
+    height: 1.2rem !important;
+    margin-top: 1rem !important;
+    transition: all .7s;
+  }
+
+  .swiper-pagination-bullet-active {
+    transform: scale(1.5);
+    transition: all .7s;
+    background: rgb(131, 252, 216) !important;
+  }
+
   .page {
     height: 100%;
     padding: 40px;

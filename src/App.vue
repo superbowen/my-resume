@@ -2,8 +2,10 @@
   <div id="app">
 
     <div class="bg" id="bg">
-      <img src="../static/bg.jpg" alt="a cool bg" width="1920" height="2664">
+      <img src="../static/img/bg.jpg" alt="a cool bg" width="1920" height="2664">
     </div>
+
+    <lang-controller></lang-controller>
 
     <swiper :options="swiperOption" class="swiper-box">
 
@@ -31,11 +33,11 @@
   import intros from './pages/intros/intros.vue'
   import projects from './pages/projects/projects.vue'
   import skills from './pages/skills/skills.vue'
+  import langController from './components/langController.vue'
   export default {
     name: 'app',
     data() {
       return {
-        CurrentIndex: 1,
         swiperOption: {
           pagination: '.swiper-pagination',
           direction: 'vertical',
@@ -45,37 +47,28 @@
           keyboardControl: true,
           mousewheelControl: true,
           speed: 700,
-//          loop: true,
           onTransitionStart(swiper) {
-            this.CurrentIndex = swiper.activeIndex
-//            console.log(document.getElementById('bg'))
-//            console.log(this.$refs.bg)
             if (window.innerWidth < 768) { // mobile
-              document.getElementById('bg').style.top = -this.CurrentIndex * 50 - 800 + 'px'
-              console.log(document.getElementById('bg').style.top)
+              document.getElementById('bg').style.top = -swiper.activeIndex * 50 - 800 + 'px'
               return
             } else if (window.innerWidth < 769) { // 768
-              document.getElementById('bg').style.top = -this.CurrentIndex * 90 + 'px'
-              console.log(document.getElementById('bg').style.top)
+              document.getElementById('bg').style.top = -swiper.activeIndex * 90 + 'px'
               return
             } else if (window.innerWidth < 1025) { // 1024
-              document.getElementById('bg').style.top = -this.CurrentIndex * 90 - 300 + 'px'
-              console.log(document.getElementById('bg').style.top)
+              document.getElementById('bg').style.top = -swiper.activeIndex * 90 - 300 + 'px'
               return
             } else if (window.innerWidth < 1367) { // 1366
-              document.getElementById('bg').style.top = -this.CurrentIndex * 90 - 200 + 'px'
-              console.log(document.getElementById('bg').style.top)
+              document.getElementById('bg').style.top = -swiper.activeIndex * 90 - 200 + 'px'
               return
-            } else {
-              document.getElementById('bg').style.top = -this.CurrentIndex * 130 - 300 + 'px'
-              console.log(document.getElementById('bg').style.top)
+            } else { // destop
+              document.getElementById('bg').style.top = -swiper.activeIndex * 130 - 300 + 'px'
             }
           }
         }
       }
     },
     components: {
-      index, intros, projects, skills
+      index, intros, projects, skills, langController
     }
   }
 </script>
@@ -105,12 +98,12 @@
         .swiper-pagination-bullet
           width: .7rem !important;
           height: .7rem !important;
-          margin-top: 1rem !important;
+          margin-top: .7rem !important;
           transition: all .7s;
           &.swiper-pagination-bullet-active
             transform: scale(1.5);
             transition: all .7s;
-            background: rgb(131, 252, 216) !important;
+            background: rgba(0, 0, 0, .4) !important;
 
   @media only screen and (min-width: 1367px)
   //destop

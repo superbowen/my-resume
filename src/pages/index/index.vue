@@ -1,10 +1,18 @@
 <template>
   <div class="index page">
     <div class="avatar">
-      <img src="../../../static/img/avatar.jpg" alt="avatar">
+      <img src="../../assets/img/avatar.jpg" alt="avatar">
     </div>
     <p class="name">{{_data.name}}</p>
     <p class="desc">{{_data.desc}}</p>
+    <div class="social">
+      <a :href="_data.social.blog.href" target="_blank"><i class="iconfont icon-blog"></i></a>
+      <a :href="_data.social.github.href" target="_blank"><i class="iconfont icon-github1"></i></a>
+      <a :href="_data.social.zhihu.href" target="_blank"><i class="iconfont icon-zhihu"></i></a>
+    </div>
+    <div class="footer">
+      <a href="https://github.com/superbowen/my-resume" target="_blank">Star or fork this page at Github</a>
+    </div>
   </div>
 </template>
 
@@ -19,6 +27,8 @@
 </script>
 
 <style type="text/stylus" lang='stylus' rel='stylesheet/stylus' scoped>
+  @import '../../assets/iconfont/iconfont.styl'
+
   .index
     background: radial-gradient(ellipse closest-side, rgba(255, 255, 255, .6), rgba(255, 255, 255, 0))
     display: flex
@@ -45,14 +55,44 @@
       font-size: .5rem
       line-height: 2rem
 
-  @media screen and (max-width:768px)
+    .social
+      line-height: 3rem
+      a
+        color: #333
+        text-decoration: none
+        width: 3rem
+        height: 3rem
+        .icon-zhihu:hover
+          color: #0f88eb
+          font-size: 1.7rem
+        .icon-github1
+          font-size: 1.4rem
+          &:hover
+            color: mediumpurple
+            font-size: 1.6rem
+        .icon-blog:hover
+          color: orange
+          font-size: 1.7rem
+
+    .footer
+      position: absolute
+      left: 50%
+      bottom: 20px
+      transform: translateX(-50%)
+      a
+        color: #333
+        font-size: .5rem
+
+  @media screen and (max-width: 768px)
     .avatar
-      width: 6rem!important
+      width: 6rem !important
       height: 6rem !important
       img
-        border 3px solid #fff!important
+        border 3px solid #fff !important
+
     .name
-      font-size: 1.3rem!important;
+      font-size: 1.3rem !important;
+
     .desc
-      font-size: .8rem!important
+      font-size: .8rem !important
 </style>

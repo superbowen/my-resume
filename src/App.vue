@@ -2,7 +2,7 @@
   <div id="app">
 
     <div class="bg" id="bg">
-      <img src="../static/img/bg.jpg" alt="a cool bg" width="1920" height="2664">
+      <img src="./assets/img/bg.jpg" alt="a cool bg" width="1920" height="2664">
     </div>
 
     <lang-controller></lang-controller>

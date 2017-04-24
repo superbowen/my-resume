@@ -1,10 +1,33 @@
 {
   "en": {
     "name": "Bowen Zhao",
-    "desc": "22, an advancing Web Front.."
+    "desc": "22, an advancing Web Front..",
+    "social": {
+      "blog": {
+        "href": "https://superbowen.github.io/"
+      },
+      "github": {
+        "href": "https://github.com/superbowen"
+      },
+      "zhihu": {
+        "href": "https://www.zhihu.com/people/zhao-bo-wen-45/activities"
+      }
+    }
   },
   "cn": {
     "name": "赵博文",
-    "desc": "22岁，前端工程师进阶中.."
+    "desc": "22岁，前端工程师进阶中..",
+    "title": "赵博文的简历",
+    "social": {
+      "blog": {
+        "href": "https://superbowen.github.io/"
+      },
+      "github": {
+        "href": "https://github.com/superbowen"
+      },
+      "zhihu": {
+        "href": "https://www.zhihu.com/people/zhao-bo-wen-45/activities"
+      }
+    }
   }
 }

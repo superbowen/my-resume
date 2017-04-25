@@ -13,14 +13,15 @@
         <index></index>
       </swiper-slide>
       <swiper-slide>
-        <intros></intros>
+        <projects></projects>
       </swiper-slide>
       <swiper-slide>
         <skills></skills>
       </swiper-slide>
       <swiper-slide>
-        <projects></projects>
+        <intros></intros>
       </swiper-slide>
+
       <div class="swiper-pagination" slot="pagination"></div>
 
     </swiper>
@@ -94,8 +95,9 @@
           height: 100%;
           padding: 40px;
           .title
-            position: absolute
-            top: 40px
+            /*position: absolute*/
+            /*top: 40px*/
+            /*width: 100%*/
             line-height: 80px;
             font-weight: normal
             text-align: center;

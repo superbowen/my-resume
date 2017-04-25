@@ -61,6 +61,8 @@
         color: #333
         text-decoration: none
         margin-right: .3rem
+        .iconfont
+          transition: all .3s
         .icon-zhihu:hover
           color: #0f88eb
         .icon-github1

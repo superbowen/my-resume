@@ -94,6 +94,7 @@
         .page
           height: 100%;
           padding: 40px;
+          font-size: 1rem
           .title
             /*position: absolute*/
             /*top: 40px*/
@@ -101,7 +102,6 @@
             line-height: 80px;
             font-weight: normal
             text-align: center;
-            color: rgba(255,255,255,.9);
             text-shadow: 0 0 6px rgba(0,0,0,.2);
         .swiper-pagination
           right: 20px !important;

@@ -38,6 +38,7 @@
     padding: 0 !important
     .title
       padding-bottom: 30px
+      color: #343c41
     .card-wrapper0
       width: 100%
       overflow: auto

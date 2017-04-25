@@ -19,7 +19,7 @@
       </button>
     </div>
     <transition name="fade">
-      <div class="qrcode-mask" v-show="showQrcode" @click="showQrcode=false">
+      <div class="qrcode-mask"v-if="project.qrcode"  v-show="showQrcode" @click="showQrcode=false">
         <img :src="project.qrcode">
       </div>
     </transition>
@@ -65,24 +65,29 @@
     transition: all 300ms ease;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    /*justify-content: space-around;
+    align-items: center;*/
     .img-wrapper
+      flex 0 1 150px
       height: 150px
       border-radius 4px
       img
         height: 100%
         width: 100%
+        border-radius 4px
     .desc
-      margin-top: 6px;
+      flex 1
       font-size: 16px;
+      margin-top: 6px
       line-height: 28px;
       text-indent: 2em;
       text-align: justify;
+      text-overflow: ellipsis
     .btn-wrapper
       position: absolute;
       left: 0;
       bottom: 0;
+      /*flex 0 1 36px*/
       width: 100%;
       padding: 10px;
       display: flex;

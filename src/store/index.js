@@ -4,7 +4,7 @@ import SourceData from './SourceData.json'
 Vue.use(Vuex)
 
 const state = {
-  language: 'en'
+  language: 'cn'
 }
 const getters = {
   data(state) {

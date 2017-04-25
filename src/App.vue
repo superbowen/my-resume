@@ -48,6 +48,7 @@
           mousewheelControl: true,
           speed: 700,
           onTransitionStart(swiper) {
+            this.CurrentIndex = swiper.activeIndex
             if (window.innerWidth < 768) { // mobile
               document.getElementById('bg').style.top = -swiper.activeIndex * 50 - 800 + 'px'
               return
@@ -92,7 +93,14 @@
         .page
           height: 100%;
           padding: 40px;
-          font-size: 1rem;
+          .title
+            position: absolute
+            top: 40px
+            line-height: 80px;
+            font-weight: normal
+            text-align: center;
+            color: rgba(255,255,255,.9);
+            text-shadow: 0 0 6px rgba(0,0,0,.2);
         .swiper-pagination
           right: 20px !important;
         .swiper-pagination-bullet
@@ -123,7 +131,6 @@
       right: -350px
       top: -200px
       transition: all .7s
-
     html
       font-size: 32px
 
@@ -134,7 +141,6 @@
       right: -350px
       top: -300px
       transition: all .7s
-
     html
       font-size: 32px
 
@@ -145,7 +151,6 @@
       right: -350px
       top: -200px
       transition: all .7s
-
     html
       font-size: 32px
 
@@ -157,7 +162,6 @@
       right: -700px
       top: -800px
       transition: all .7s
-
     html
       font-size: 20px
 

@@ -1,7 +1,7 @@
 <template>
   <div class="index page">
     <div class="avatar">
-      <img src="../../assets/img/avatar.jpg" alt="avatar">
+      <img src="https://avatars3.githubusercontent.com/u/20217146?v=3&s=460" alt="avatar">
     </div>
     <p class="name">{{_data.name}}</p>
     <p class="desc">{{_data.desc}}</p>
@@ -60,19 +60,15 @@
       a
         color: #333
         text-decoration: none
-        width: 3rem
-        height: 3rem
+        margin-right: .3rem
         .icon-zhihu:hover
           color: #0f88eb
-          font-size: 1.7rem
         .icon-github1
           font-size: 1.4rem
           &:hover
             color: mediumpurple
-            font-size: 1.6rem
         .icon-blog:hover
           color: orange
-          font-size: 1.7rem
 
     .footer
       position: absolute

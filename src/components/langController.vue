@@ -22,6 +22,7 @@
     methods: {
       selectLang(lang) {
         this.$store.commit('selLang', lang)
+        document.title = this.$store.getters.data.title
       }
     },
     computed: {

@@ -3,7 +3,13 @@
 </template>
 
 <script>
-  export default {}
+  export default {
+    computed: {
+      _data() {
+        return this.$store.getters.data
+      }
+    }
+  }
 </script>
 
 <style type="text/stylus" lang='stylus' rel='stylesheet/stylus' scoped>

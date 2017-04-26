@@ -6,7 +6,7 @@
     <p class="name">{{_data.name}}</p>
     <p class="desc">{{_data.desc}}</p>
     <div class="social">
-      <a :href="_data.social.blog.href" target="_blank"><i class="iconfont icon-blog"></i></a>
+      <a :href="_data.social.blog.href" target="_blank"><i class="iconfont icon-blog1"></i></a>
       <a :href="_data.social.github.href" target="_blank"><i class="iconfont icon-github1"></i></a>
       <a :href="_data.social.zhihu.href" target="_blank"><i class="iconfont icon-zhihu"></i></a>
     </div>
@@ -56,21 +56,28 @@
       line-height: 2rem
 
     .social
-      line-height: 3rem
+      line-height: 2rem
       a
-        color: #333
+        display: inline-block
+        width: 1.7rem
+        height: 1.7rem
+        color: #222
+        border-radius 50%
+        text-align center
         text-decoration: none
         margin-right: .3rem
+        background: rgba(3, 3, 3, .3)
+        transition all .3s
+        &:hover
+          border-radius 5px
         .iconfont
           transition: all .3s
-        .icon-zhihu:hover
-          color: #0f88eb
+          line-height: 1.7rem
+          width: 1.7rem
+          height: 1.7rem
+          display: inline-block
         .icon-github1
-          font-size: 1.4rem
-          &:hover
-            color: mediumpurple
-        .icon-blog:hover
-          color: orange
+          font-size: 1.2rem
 
     .footer
       position: absolute

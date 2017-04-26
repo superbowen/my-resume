@@ -57,7 +57,7 @@
     padding: 10px;
     padding-bottom: 60px;
     width: 280px;
-    height: 400px;
+    height: 410px;
     background: linear-gradient(to bottom, #FFF, #F0F0F0);
     border-radius: 6px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, .1);

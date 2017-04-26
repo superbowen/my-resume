@@ -37,8 +37,7 @@
     align-items: center;
     padding: 0 !important
     .title
-      padding-bottom: 30px
-      color: #343c41
+      color: #5f6e73
     .card-wrapper0
       width: 100%
       overflow: auto
@@ -50,7 +49,7 @@
     .see-more
       width: 48%;
       height: 2rem;
-      margin-top: 1.5rem
+      margin-top: 1.2rem
       font-size: .8rem
       color: #859398
       border: 1px solid #859398;
@@ -74,8 +73,14 @@
     .card-wrapper
       width: 80%;
       margin-left: 10%;
+    .title
+      padding-bottom: 30px
 
   @media screen and (max-width: 1025px)
     .card-wrapper
       width: 800px;
+    .see-more
+      margin-top: .7rem!important
+      height: 1.3rem !important
+      width: 55% !important
 </style>

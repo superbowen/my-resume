@@ -1,6 +1,6 @@
 <template>
-  <div class="intros page">
-    <h1 class="title">{{_data.intros.title}}</h1>
+  <div class="contact page">
+    <h1 class="title">contact</h1>
   </div>
 </template>
 
@@ -15,6 +15,5 @@
 </script>
 
 <style type="text/stylus" lang='stylus' rel='stylesheet/stylus' scoped>
-  .intros
-    //background: rgb(129, 146, 214);
+
 </style>

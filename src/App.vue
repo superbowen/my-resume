@@ -19,7 +19,7 @@
         <skills></skills>
       </swiper-slide>
       <swiper-slide>
-        <intros></intros>
+        <contact></contact>
       </swiper-slide>
 
       <div class="swiper-pagination" slot="pagination"></div>
@@ -31,7 +31,7 @@
 
 <script>
   import index from './pages/index/index.vue'
-  import intros from './pages/intros/intros.vue'
+  import contact from './pages/contact/contact.vue'
   import projects from './pages/projects/projects.vue'
   import skills from './pages/skills/skills.vue'
   import langController from './components/langController.vue'
@@ -70,7 +70,7 @@
       }
     },
     components: {
-      index, intros, projects, skills, langController
+      index, contact, projects, skills, langController
     }
   }
 </script>

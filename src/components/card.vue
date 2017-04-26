@@ -58,10 +58,10 @@
     padding-bottom: 60px;
     width: 280px;
     height: 410px;
-    background: linear-gradient(to bottom, #FFF, #F0F0F0);
+    background: linear-gradient(to bottom, #98a7ac, #F0F0F0);
     border-radius: 6px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
-    border: 1px solid rgba(255, 255, 255, .3);
+    // border: 1px solid rgba(255, 255, 255, .3);
     transition: all 300ms ease;
     display: flex;
     flex-direction: column;

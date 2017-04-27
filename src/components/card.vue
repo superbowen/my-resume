@@ -19,7 +19,7 @@
       </button>
     </div>
     <transition name="fade">
-      <div class="qrcode-mask"v-if="project.qrcode"  v-show="showQrcode" @click="showQrcode=false">
+      <div class="qrcode-mask" v-if="project.qrcode" v-show="showQrcode" @click="showQrcode=false">
         <img :src="project.qrcode">
       </div>
     </transition>

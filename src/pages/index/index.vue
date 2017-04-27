@@ -1,7 +1,7 @@
 <template>
   <div class="index page">
     <div class="avatar">
-      <img src="https://avatars3.githubusercontent.com/u/20217146?v=3&s=460" alt="avatar">
+      <img src="https://avatars3.githubusercontent.com/u/20217146?v=3&s=460" alt="avatar" ref="avatar" @mouseover="hover" @mouseout="revertHover">
     </div>
     <p class="name">{{_data.name}}</p>
     <p class="desc">{{_data.desc}}</p>
@@ -22,6 +22,14 @@
       _data() {
         return this.$store.getters.data
       }
+    },
+    methods: {
+      hover() {
+        this.$refs.avatar.src = 'http://mypics.zhaopin.com/pic/2017/1/29/2FA4A258B2484D89AB624380CC551C5E.jpg'
+      },
+      revertHover() {
+        this.$refs.avatar.src = 'https://avatars3.githubusercontent.com/u/20217146?v=3&s=460'
+      }
     }
   }
 </script>
@@ -41,12 +49,13 @@
       height: 5rem
       img
         width: 100%
+        height: 100%
         border-radius: 50%
         border 5px solid #fff
         box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
         transition all .3s
-        &:hover
-          border-radius 10px
+        /*&:hover*/
+          /*border-radius 10px*/
     .name
       margin-top: 20px
       color: #444

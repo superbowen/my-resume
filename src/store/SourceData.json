@@ -14,6 +14,10 @@
         "href": "https://www.zhihu.com/people/zhao-bo-wen-45/activities"
       }
     },
+    "skills": {
+      "title": "Skills",
+      "desc": "Need to persevere in the front-end learning, knowledge depth and breadth are very important. The front end of the development of the most important is the understanding of native JavaScript, and now the idea must be modular, modular, engineering."
+    },
     "projects": {
       "title": "Projects",
       "footerDesc": "See more on Github",
@@ -26,7 +30,7 @@
         },
         {
           "screenShot": "http://r.photo.store.qq.com/psb?/V11suuTk2IvA3D/johbKUF5Gc.RkEmhgFMRaN2rpP2X3uwKWIIu0kwTTmM!/r/dG4BAAAAAAAA",
-          "desc": "The online responsive resume designed of my own , compatible with PC and mobile mouse, keyboard and touch operation, adaptive multi size screen, do not care too much about the color.",
+          "desc": "The online responsive resume designed of my own,compatible with PC and mobile mouse,keyboard and touch operation,adaptive multi size screen,switch language with no fresh.",
           "site": "",
           "qrcode": ""
         },
@@ -37,6 +41,13 @@
           "qrcode": "http://r.photo.store.qq.com/psb?/V11suuTk2IvA3D/Yw3i.qs.CPqQjQ17pSu5C.8xOz8hfh5WiMHu7.nSAW8!/r/dB8BAAAAAAAA"
         }
       ]
+    },
+    "contact": {
+      "desc": ["Pursue simple and readable code","Good at learning and solving problems","Curious about new technologies","Am I the one you are looking for","Contact me"],
+      "phone": "18362080051",
+      "mail": "z.bowen66@gmail.com",
+      "wechat": "bowen123zhao",
+      "wechatqrcode": "https://superbowen.github.io/img/wechat.png"
     }
   },
   "cn": {
@@ -54,6 +65,10 @@
         "href": "https://www.zhihu.com/people/zhao-bo-wen-45/activities"
       }
     },
+    "skills": {
+      "title": "技能",
+      "desc": "前端的学习需要持之以恒，知识深度与广度都很重要。而前端开发的重中之重就是原生javascript的理解，而如今的思路必需有模块化，组件化，工程化。"
+    },
     "projects": {
       "title": "项目经历",
       "footerDesc": "在Github上查看更多",
@@ -66,7 +81,7 @@
         },
         {
           "screenShot": "http://r.photo.store.qq.com/psb?/V11suuTk2IvA3D/johbKUF5Gc.RkEmhgFMRaN2rpP2X3uwKWIIu0kwTTmM!/r/dG4BAAAAAAAA",
-          "desc": "自行设计的响应式线上简历，就是这个页面啦，兼容pc和移动端鼠标、键盘和触摸操作，自适应多尺寸屏幕，没有设计稿，所以不要太在意配色了。",
+          "desc": "自行设计、独立开发的响应式线上简历（基于Vue.js），就是这个页面啦，兼容pc和移动端鼠标、键盘和触摸操作，自适应多尺寸屏幕，无刷新切换语言，没有设计稿，所以不要太在意配色了。",
           "site": "",
           "qrcode": ""
         },
@@ -77,6 +92,13 @@
           "qrcode": "http://r.photo.store.qq.com/psb?/V11suuTk2IvA3D/Yw3i.qs.CPqQjQ17pSu5C.8xOz8hfh5WiMHu7.nSAW8!/r/dB8BAAAAAAAA"
         }
       ]
+    },
+    "contact": {
+      "desc": ["追求代码的简洁易读","善于学习并解决问题","对新技术好奇但理智","我是你要找的前端吗","联系我吧"],
+      "phone": "18362080051",
+      "mail": "z.bowen66@gmail.com",
+      "wechat": "bowen123zhao",
+      "wechatqrcode": "https://superbowen.github.io/img/wechat.png"
     }
   }
 }

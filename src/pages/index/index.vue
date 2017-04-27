@@ -44,6 +44,9 @@
         border-radius: 50%
         border 5px solid #fff
         box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+        transition all .3s
+        &:hover
+          border-radius 10px
     .name
       margin-top: 20px
       color: #444
@@ -61,21 +64,18 @@
         display: inline-block
         width: 1.7rem
         height: 1.7rem
-        color: #222
+        color: rgba(3, 3, 3, .7)
         border-radius 50%
         text-align center
         text-decoration: none
         margin-right: .3rem
-        background: rgba(3, 3, 3, .3)
+        background: rgba(255, 255, 255, .5)
         transition all .3s
         &:hover
           border-radius 5px
         .iconfont
           transition: all .3s
           line-height: 1.7rem
-          width: 1.7rem
-          height: 1.7rem
-          display: inline-block
         .icon-github1
           font-size: 1.2rem
 

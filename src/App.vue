@@ -1,13 +1,13 @@
 <template>
   <div id="app">
 
-    <div class="bg" id="bg">
+    <div class="bg" id="bg" ref="bg">
       <img src="./assets/img/bg.jpg" alt="a cool bg" width="1920" height="2664">
     </div>
 
     <lang-controller></lang-controller>
 
-    <swiper :options="swiperOption" class="swiper-box">
+    <swiper :options="swiperOption" class="swiper-box" ref="mySwiper">
 
       <swiper-slide>
         <index></index>
@@ -42,6 +42,7 @@
         swiperOption: {
           pagination: '.swiper-pagination',
           direction: 'vertical',
+          notNextTick: true,
           slidesPerView: 1,
           paginationClickable: true,
           spaceBetween: 0,
@@ -49,7 +50,6 @@
           mousewheelControl: true,
           speed: 700,
           onTransitionStart(swiper) {
-            this.CurrentIndex = swiper.activeIndex
             if (window.innerWidth < 768) { // mobile
               document.getElementById('bg').style.top = -swiper.activeIndex * 50 - 800 + 'px'
               return
@@ -69,6 +69,28 @@
         }
       }
     },
+//    computed: {
+//      swiper() {
+//        console.log(this.$refs.mySwiper.swiper.activeIndex)
+//        return this.$refs.mySwiper.swiper
+//      },
+//      ttop() {
+//        return this.$refs.bg
+//      }
+//    },
+//    methods: {
+//      change() {
+//        console.log(1)
+//      }
+//    },
+//    watch: {
+//      'ttop'() {
+//        console.log(this.swiper.activeIndex)
+//      }
+//    },
+//    mounted() {
+//      console.log(this.swiper.activeIndex)
+//    },
     components: {
       index, contact, projects, skills, langController
     }
@@ -96,22 +118,20 @@
           padding: 40px;
           font-size: 1rem
           .title
-            /*position: absolute*/
-            /*top: 40px*/
-            /*width: 100%*/
             line-height: 80px;
             font-weight: normal
+            font-size: 1.5rem
             text-align: center;
-            text-shadow: 0 0 6px rgba(0,0,0,.2);
+            text-shadow: 0 0 6px rgba(0, 0, 0, .2);
         .swiper-pagination
           right: 20px !important;
         .swiper-pagination-bullet
-          width: .7rem !important;
-          height: .7rem !important;
+          width: .5rem !important;
+          height: .5rem !important;
           margin-top: .7rem !important;
           transition: all .7s;
           &.swiper-pagination-bullet-active
-            transform: scale(1.5);
+            transform: scale(1.7);
             transition: all .7s;
             background: rgba(0, 0, 0, .4) !important;
 
@@ -133,6 +153,7 @@
       right: -350px
       top: -200px
       transition: all .7s
+
     html
       font-size: 32px
 
@@ -143,6 +164,7 @@
       right: -350px
       top: -300px
       transition: all .7s
+
     html
       font-size: 32px
 
@@ -153,6 +175,7 @@
       right: -350px
       top: -200px
       transition: all .7s
+
     html
       font-size: 32px
 
@@ -164,6 +187,7 @@
       right: -700px
       top: -800px
       transition: all .7s
+
     html
       font-size: 20px
 

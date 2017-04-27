@@ -37,7 +37,8 @@
     align-items: center;
     padding: 0 !important
     .title
-      color: #5f6e73
+      padding-bottom: 30px
+      color: #343c41
     .card-wrapper0
       width: 100%
       overflow: auto
@@ -49,10 +50,10 @@
     .see-more
       width: 48%;
       height: 2rem;
-      margin-top: 1.2rem
+      margin: 1.2rem 0
       font-size: .8rem
-      color: #859398
-      border: 1px solid #859398;
+      color: #333
+      border: 1px solid #333;
       background: transparent;
       border-radius: 4px;
       text-decoration none
@@ -65,22 +66,24 @@
         font-size: 1rem
         margin-right: .3rem
       &:hover
-        background: #859398;
+        background: #333;
         color: #fff
-        opacity: .7;
+        opacity: .6;
 
   @media screen and (min-width: 1025px)
     .card-wrapper
       width: 80%;
       margin-left: 10%;
+
     .title
       padding-bottom: 30px
 
   @media screen and (max-width: 1025px)
     .card-wrapper
       width: 800px;
+
     .see-more
-      margin-top: .7rem!important
+      margin: .7rem 0 !important
       height: 1.3rem !important
       width: 55% !important
 </style>

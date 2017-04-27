@@ -53,19 +53,19 @@
 <style type="text/stylus" lang='stylus' rel='stylesheet/stylus' scoped>
   .card
     position: relative;
-    margin: 0 10px;
-    padding: 10px;
+    margin: 0 1rem;
+    padding: .5rem;
     padding-bottom: 60px;
-    width: 280px;
-    height: 410px;
+    width: 10rem;
+    height: 16rem;
     background: linear-gradient(to bottom, #98a7ac, #F0F0F0);
     border-radius: 6px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
     display: flex;
     flex-direction: column;
     .img-wrapper
-      flex 0 1 150px
-      height: 150px
+      flex 0 1 5rem
+      height: 5rem
       border-radius 4px
       img
         height: 100%
@@ -73,9 +73,9 @@
         border-radius 4px
     .desc
       flex 1
-      font-size: 16px;
-      margin-top: 6px
-      line-height: 28px;
+      font-size: .5rem;
+      margin-top: .2rem
+      line-height: 1rem;
       text-indent: 2em;
       text-align: justify;
       text-overflow: ellipsis
@@ -92,7 +92,7 @@
       align-items: center;
       .btn
         width: 48%;
-        height: 36px;
+        height: 1.2rem;
         border: 1px solid #859398;
         background: transparent;
         border-radius: 4px;
@@ -106,6 +106,7 @@
         align-items: center;
         svg
           fill: #859398;
+          height: .7rem
         &:hover
           opacity: 1;
           background: #859398;

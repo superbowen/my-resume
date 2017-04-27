@@ -5,7 +5,8 @@ Vue.use(Vuex)
 
 const state = {
   language: 'cn',
-  currentPage: 0
+  currentPage: 0,
+  cardIdx: 1
 }
 const getters = {
   data(state) {
@@ -19,6 +20,9 @@ const mutations = {
   },
   changePage(state, page) {
     state.currentPage = page
+  },
+  changeCard(state, card) {
+    state.cardIdx = card
   }
 }
 export default new Vuex.Store({

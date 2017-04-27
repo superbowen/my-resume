@@ -1,5 +1,5 @@
 <template>
-  <div id="app" @touchstart.stop.prevent="touchstart" @touchend.stop.prevent="touchend">
+  <div id="app" @touchstart.prevent="touchstart" @touchend.prevent="touchend">
 
     <div class="bg" id="bg" ref="bg">
       <img src="./assets/img/bg.jpg" alt="a cool bg" width="1920" height="2664">
@@ -48,38 +48,6 @@
   import langController from './components/langController.vue'
   export default {
     name: 'app',
-    data() {
-      return {
-        swiperOption: {
-          pagination: '.swiper-pagination',
-          direction: 'vertical',
-          notNextTick: true,
-          slidesPerView: 1,
-          paginationClickable: true,
-          spaceBetween: 0,
-          keyboardControl: true,
-          mousewheelControl: true,
-          speed: 700,
-          onTransitionStart(swiper) {
-            if (window.innerWidth < 768) { // mobile
-              document.getElementById('bg').style.top = -swiper.activeIndex * 50 - 800 + 'px'
-              return
-            } else if (window.innerWidth < 769) { // 768
-              document.getElementById('bg').style.top = -swiper.activeIndex * 90 + 'px'
-              return
-            } else if (window.innerWidth < 1025) { // 1024
-              document.getElementById('bg').style.top = -swiper.activeIndex * 90 - 300 + 'px'
-              return
-            } else if (window.innerWidth < 1367) { // 1366
-              document.getElementById('bg').style.top = -swiper.activeIndex * 90 - 200 + 'px'
-              return
-            } else { // destop
-              document.getElementById('bg').style.top = -swiper.activeIndex * 130 - 300 + 'px'
-            }
-          }
-        }
-      }
-    },
     computed: {
       currentPage() {
         return this.$store.state.currentPage
@@ -88,6 +56,21 @@
     methods: {
       changePage(i) {
         this.$store.commit('changePage', i)
+        if (window.innerWidth < 768) { // mobile
+          document.getElementById('bg').style.top = -this.currentPage * 50 - 800 + 'px'
+          return
+        } else if (window.innerWidth < 769) { // 768
+          document.getElementById('bg').style.top = -this.currentPage * 90 + 'px'
+          return
+        } else if (window.innerWidth < 1025) { // 1024
+          document.getElementById('bg').style.top = -this.currentPage * 90 - 300 + 'px'
+          return
+        } else if (window.innerWidth < 1367) { // 1366
+          document.getElementById('bg').style.top = -this.currentPage * 90 - 200 + 'px'
+          return
+        } else { // destop
+          document.getElementById('bg').style.top = -this.currentPage * 130 - 300 + 'px'
+        }
       },
       slideNext() {
         if (this.currentPage >= 3) {
@@ -102,13 +85,9 @@
         this.changePage(this.currentPage - 1)
       },
       touchstart(e) {
-//        e.preventDefault()
-//        e.stopPropagation()
         this.startY = e.changedTouches[0].pageY
       },
       touchend(e) {
-//        e.preventDefault()
-//        e.stopPropagation()
         this.endY = e.changedTouches[0].pageY
         let diffY = this.endY - this.startY
         console.log(diffY)
@@ -170,11 +149,11 @@
         position: fixed
         transition: all .7s
         &.activePage
-          top 0
+          transform translate3d(0, 0, 0)
         &.nextPage
-          top 100%
+          transform translate3d(0, 100%, 0)
         &.prevPage
-          top -100%
+          transform translate3d(0, -100%, 0)
         .page
           height: 100%;
           padding: 40px;

@@ -4,6 +4,7 @@
          :class="{'active':CurrentLang == lang.language}"
          v-for="lang in langs"
          @click="selectLang(lang.language)"
+         @touchstart="selectLang(lang.language)"
     >{{lang.desc}}
     </div>
   </div>

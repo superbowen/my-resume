@@ -1,11 +1,13 @@
 <template>
-  <div id="app" @touchstart.prevent="touchstart" @touchend.prevent="touchend">
+  <div id="app" @touchstart="touchstart" @touchend="touchend">
 
     <div class="bg" id="bg" ref="bg">
       <img src="./assets/img/bg.jpg" alt="a cool bg" width="1920" height="2664">
     </div>
 
     <lang-controller></lang-controller>
+
+    <navigator></navigator>
 
     <div class="page-wrapper" :class="{
       'activePage':currentPage==0,
@@ -46,6 +48,7 @@
   import projects from './pages/projects/projects.vue'
   import skills from './pages/skills/skills.vue'
   import langController from './components/langController.vue'
+  import navigator from './components/navigator.vue'
   export default {
     name: 'app',
     computed: {
@@ -90,12 +93,11 @@
       touchend(e) {
         this.endY = e.changedTouches[0].pageY
         let diffY = this.endY - this.startY
-        console.log(diffY)
-        if (diffY > 80) {
+        if (diffY > 30) {
           this.slidePrev()
           return
         }
-        if (diffY < -80) {
+        if (diffY < -30) {
           this.slideNext()
         }
       }
@@ -122,7 +124,7 @@
       }
     },
     components: {
-      index, contact, projects, skills, langController
+      index, contact, projects, skills, langController, navigator
     }
   }
 </script>

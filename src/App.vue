@@ -7,24 +7,18 @@
 
     <lang-controller></lang-controller>
 
-    <swiper :options="swiperOption" class="swiper-box" ref="mySwiper">
-
-      <swiper-slide>
-        <index></index>
-      </swiper-slide>
-      <swiper-slide>
-        <projects></projects>
-      </swiper-slide>
-      <swiper-slide>
-        <skills></skills>
-      </swiper-slide>
-      <swiper-slide>
-        <contact></contact>
-      </swiper-slide>
-
-      <div class="swiper-pagination" slot="pagination"></div>
-
-    </swiper>
+    <div class="page-wrapper">
+      <index></index>
+    </div>
+    <div class="page-wrapper">
+      <projects></projects>
+    </div>
+    <div class="page-wrapper">
+      <skills></skills>
+    </div>
+    <div class="page-wrapper">
+      <contact></contact>
+    </div>
 
   </div>
 </template>
@@ -69,28 +63,16 @@
         }
       }
     },
-//    computed: {
-//      swiper() {
-//        console.log(this.$refs.mySwiper.swiper.activeIndex)
-//        return this.$refs.mySwiper.swiper
-//      },
-//      ttop() {
-//        return this.$refs.bg
-//      }
-//    },
-//    methods: {
-//      change() {
-//        console.log(1)
-//      }
-//    },
-//    watch: {
-//      'ttop'() {
-//        console.log(this.swiper.activeIndex)
-//      }
-//    },
-//    mounted() {
-//      console.log(this.swiper.activeIndex)
-//    },
+    computed: {
+      currentPage() {
+        return this.$store.state.currentPage
+      }
+    },
+    methods: {
+      changePage(i) {
+        this.$store.commit('changePage', i)
+      }
+    },
     components: {
       index, contact, projects, skills, langController
     }
@@ -110,9 +92,11 @@
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       height: 100%;
-      .swiper-box
-        width: 100%;
-        height: 100%;
+      #bg
+        z-index: -1000
+      .page-wrapper
+        width: 100%
+        height:100%
         .page
           height: 100%;
           padding: 40px;
@@ -123,17 +107,22 @@
             font-size: 1.5rem
             text-align: center;
             text-shadow: 0 0 6px rgba(0, 0, 0, .2);
-        .swiper-pagination
-          right: 20px !important;
-        .swiper-pagination-bullet
-          width: .5rem !important;
-          height: .5rem !important;
-          margin-top: .7rem !important;
-          transition: all .7s;
-          &.swiper-pagination-bullet-active
-            transform: scale(1.7);
-            transition: all .7s;
-            background: rgba(0, 0, 0, .4) !important;
+
+  /*.swiper-box
+    width: 100%;
+    height: 100%;
+
+    .swiper-pagination
+      right: 20px !important;
+    .swiper-pagination-bullet
+      width: .5rem !important;
+      height: .5rem !important;
+      margin-top: .7rem !important;
+      transition: all .7s;
+      &.swiper-pagination-bullet-active
+        transform: scale(1.7);
+        transition: all .7s;
+        background: rgba(0, 0, 0, .4) !important;*/
 
   @media only screen and (min-width: 1367px)
   //destop

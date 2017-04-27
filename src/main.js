@@ -3,9 +3,7 @@
 import Vue from 'vue'
 import store from './store'
 import App from './App'
-import VueAwesomeSwiper from 'vue-awesome-swiper'
 
-Vue.use(VueAwesomeSwiper)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

@@ -67,6 +67,7 @@
     border-radius: 6px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
     display: flex;
+    overflow: hidden
     flex-direction: column;
     .img-wrapper
       flex 0 1 5rem
@@ -78,7 +79,7 @@
         border-radius 4px
     .desc
       flex 1
-      font-size: .5rem;
+      font-size: .7rem;
       margin-top: .2rem
       line-height: 1rem;
       text-indent: 2em;

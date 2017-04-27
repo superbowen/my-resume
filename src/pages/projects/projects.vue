@@ -121,7 +121,7 @@
         &.active
           transform translate3d(0, 0, 0)
         &.prev
-          transform translate3d(-200%, 0, 0) scale(.5)
+          transform translate3d(-100%, 0, 0) scale(.8)
         &.next
-          transform translate3d(200%, 0, 0) scale(.5)
+          transform translate3d(100%, 0, 0) scale(.8)
 </style>

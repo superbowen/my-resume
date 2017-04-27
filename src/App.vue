@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" @touchstart.stop.prevent="touchstart" @touchend.stop.prevent="touchend">
 
     <div class="bg" id="bg" ref="bg">
       <img src="./assets/img/bg.jpg" alt="a cool bg" width="1920" height="2664">
@@ -7,16 +7,33 @@
 
     <lang-controller></lang-controller>
 
-    <div class="page-wrapper">
+    <div class="page-wrapper" :class="{
+      'activePage':currentPage==0,
+      'prevPage':currentPage>0,
+      'nextPage':currentPage<0
+      }">
       <index></index>
     </div>
-    <div class="page-wrapper">
+
+    <div class="page-wrapper" :class="{
+      'activePage':currentPage==1,
+      'prevPage':currentPage>1,
+      'nextPage':currentPage<1
+      }">
       <projects></projects>
     </div>
-    <div class="page-wrapper">
+    <div class="page-wrapper" :class="{
+      'activePage':currentPage==2,
+      'prevPage':currentPage>2,
+      'nextPage':currentPage<2
+      }">
       <skills></skills>
     </div>
-    <div class="page-wrapper">
+    <div class="page-wrapper" :class="{
+      'activePage':currentPage==3,
+      'prevPage':currentPage>3,
+      'nextPage':currentPage<3
+      }">
       <contact></contact>
     </div>
 
@@ -71,6 +88,58 @@
     methods: {
       changePage(i) {
         this.$store.commit('changePage', i)
+      },
+      slideNext() {
+        if (this.currentPage >= 3) {
+          // 最后一页回到首页
+//          this.changePage(0)
+          return
+        }
+        this.changePage(this.currentPage + 1)
+      },
+      slidePrev() {
+        if (this.currentPage === 0) return
+        this.changePage(this.currentPage - 1)
+      },
+      touchstart(e) {
+//        e.preventDefault()
+//        e.stopPropagation()
+        this.startY = e.changedTouches[0].pageY
+      },
+      touchend(e) {
+//        e.preventDefault()
+//        e.stopPropagation()
+        this.endY = e.changedTouches[0].pageY
+        let diffY = this.endY - this.startY
+        console.log(diffY)
+        if (diffY > 80) {
+          this.slidePrev()
+          return
+        }
+        if (diffY < -80) {
+          this.slideNext()
+        }
+      }
+    },
+    mounted() {
+      window.onmousewheel = (e) => {
+        e.stopPropagation()
+        e.preventDefault()
+        if (this.lock) return
+
+        if (e.wheelDelta < 0) {
+          this.lock = true
+          this.slideNext()
+          setTimeout(() => {
+            this.lock = false
+          }, 700)
+        } else if (e.wheelDelta > 0) {
+          this.lock = true
+          setTimeout(() => {
+            this.lock = false
+          }, 700)
+          this.slidePrev()
+        }
       }
     },
     components: {
@@ -92,11 +161,20 @@
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       height: 100%;
+      overflow: hidden
       #bg
         z-index: -1000
       .page-wrapper
         width: 100%
-        height:100%
+        height: 100%
+        position: fixed
+        transition: all .7s
+        &.activePage
+          top 0
+        &.nextPage
+          top 100%
+        &.prevPage
+          top -100%
         .page
           height: 100%;
           padding: 40px;

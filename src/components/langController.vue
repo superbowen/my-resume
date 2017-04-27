@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="lang-controller wrapper">
     <div class="lang"
          :class="{'active':CurrentLang == lang.language}"
          v-for="lang in langs"

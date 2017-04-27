@@ -1,9 +1,15 @@
 <template>
   <div class="projects page">
     <h1 class="title">{{_data.projects.title}}</h1>
-    <div class="card-wrapper0">
-      <div class="card-wrapper">
-        <card :project="project" v-for="(project, i) in _data.projects.items" :key="i"></card>
+    <div class="cards-wrapper" @touchstart.prevent="touchstart" @touchend.prevent="touchend">
+      <div class="card-wrapper"
+           v-for="(project, i) in _data.projects.items"
+           :class="{
+              'prev': idx>i,
+              'active': idx===i,
+              'next': idx<i
+            }">
+        <card :project="project"></card>
       </div>
     </div>
     <a href="https://github.com/superbowen" class="see-more" target="_blank">
@@ -19,6 +25,37 @@
     computed: {
       _data() {
         return this.$store.getters.data
+      },
+      idx() {
+        return this.$store.state.cardIdx
+      }
+    },
+    methods: {
+      changeCard(i) {
+        this.$store.commit('changeCard', i)
+      },
+      nextCard() {
+        if (this.idx >= 2) return
+        this.changeCard(this.idx + 1)
+      },
+      prevCard() {
+        if (this.idx === 0) return
+        this.changeCard(this.idx - 1)
+      },
+      touchstart(e) {
+        this.startX = e.changedTouches[0].pageX
+      },
+      touchend(e) {
+        this.endX = e.changedTouches[0].pageX
+        let diffX = this.endX - this.startX
+        console.log(diffX)
+        if (diffX > 80) {
+          this.prevCard()
+          return
+        }
+        if (diffX < -80) {
+          this.nextCard()
+        }
       }
     },
     components: {
@@ -39,14 +76,10 @@
     .title
       padding-bottom: 30px
       color: #343c41
-    .card-wrapper0
-      width: 100%
-      overflow: auto
+    .cards-wrapper
+      position: relative
       .card-wrapper
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
+        display: inline-block
     .see-more
       width: 48%;
       height: 2rem;
@@ -70,20 +103,25 @@
         color: #fff
         opacity: .6;
 
-  @media screen and (min-width: 1025px)
-    .card-wrapper
-      width: 80%;
-      margin-left: 10%;
-
+  @media screen and (min-width: 1365px)
     .title
       padding-bottom: 30px
 
-  @media screen and (max-width: 1025px)
-    .card-wrapper
-      width: 800px;
-
-    .see-more
-      margin: .7rem 0 !important
-      height: 1.3rem !important
-      width: 55% !important
+  @media screen and (max-width: 1365px)
+    .cards-wrapper
+      width: 100%;
+      height: 18rem
+      .card-wrapper
+        position: absolute
+        top: 50%
+        left: 50%
+        margin-top: -8rem
+        margin-left: -6rem
+        transition: all .7s
+        &.active
+          transform translate3d(0, 0, 0)
+        &.prev
+          transform translate3d(-100%, 0, 0) scale(.8)
+        &.next
+          transform translate3d(100%, 0, 0) scale(.8)
 </style>

@@ -4,7 +4,9 @@ import SourceData from './SourceData.json'
 Vue.use(Vuex)
 
 const state = {
-  language: 'cn'
+  language: 'cn',
+  currentPage: 0,
+  cardIdx: 1
 }
 const getters = {
   data(state) {
@@ -15,6 +17,12 @@ const actions = {}
 const mutations = {
   selLang(state, lang) {
     state.language = lang
+  },
+  changePage(state, page) {
+    state.currentPage = page
+  },
+  changeCard(state, card) {
+    state.cardIdx = card
   }
 }
 export default new Vuex.Store({

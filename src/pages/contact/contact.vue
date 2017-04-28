@@ -1,5 +1,5 @@
 <template>
-  <div class="contact page">
+  <div class="contact page" :class="{'animateClass':pageIdx===3}">
     <p class="desc" v-for="desc in _data.contact.desc">{{desc}}</p>
     <div class="icons-wrapper">
       <a class="icon" :href="'tel:'+_data.contact.phone" target="_blank">
@@ -23,6 +23,9 @@
     computed: {
       _data() {
         return this.$store.getters.data
+      },
+      pageIdx() {
+        return this.$store.state.currentPage
       }
     }
   }
@@ -40,8 +43,10 @@
     .desc
       line-height: 2rem
       text-align center
+      opacity: 0
     .icons-wrapper
       margin-top: 1rem
+      opacity: 0
       .icon
         display: inline-block
         position: relative
@@ -65,12 +70,40 @@
           left: -1rem
           width: 4rem
           height: 4rem
-          opacity:0
+          opacity: 0
           transition: opacity .3s
           img
             width: 100%
             border-radius 10px
         &.icon-hover:hover
           .qr-wrapper
-            opacity:1
+            opacity: 1
+
+  .animateClass
+    for i in 1..5
+      .desc:nth-child({i})
+        animation-name: animationStyle2
+        animation-duration: 700ms
+        animation-delay 700ms * i - 500ms
+        animation-timing-function: ease-in-out
+        animation-fill-mode: forwards
+
+  .animateClass
+    .icons-wrapper
+      animation-name: animationStyle2
+      animation-duration: 700ms
+      animation-delay: 3500ms
+      animation-timing-function: ease-in-out
+      animation-fill-mode: forwards
+
+  @keyframes animationStyle2
+    0%
+      opacity: 0;
+      transform: translate3d(300%, 0, 0)
+    80%
+      opacity 1
+      transform translate3d(-15%, 0, 0)
+    100%
+      opacity: 1;
+      transform: translate3d(0, 0, 0)
 </style>

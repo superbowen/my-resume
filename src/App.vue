@@ -154,8 +154,10 @@
           transform translate3d(0, 0, 0)
         &.nextPage
           transform translate3d(0, 100%, 0)
+          opacity: 0
         &.prevPage
           transform translate3d(0, -100%, 0)
+          opacity: 0
         .page
           height: 100%;
           padding: 40px;

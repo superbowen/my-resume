@@ -49,11 +49,11 @@
         this.endX = e.changedTouches[0].pageX
         let diffX = this.endX - this.startX
         console.log(diffX)
-        if (diffX > 80) {
+        if (diffX > 40) {
           this.prevCard()
           return
         }
-        if (diffX < -80) {
+        if (diffX < -40) {
           this.nextCard()
         }
       }

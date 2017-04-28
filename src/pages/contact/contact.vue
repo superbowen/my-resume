@@ -33,6 +33,7 @@
 
 <style type="text/stylus" lang='stylus' rel='stylesheet/stylus' scoped>
   @import '../../assets/iconfont/iconfont.styl'
+  @import '../../assets/animation.styl'
 
   .contact
     background: radial-gradient(ellipse closest-side, rgba(255, 255, 255, .6), rgba(255, 255, 255, 0))
@@ -82,7 +83,7 @@
   .animateClass
     for i in 1..5
       .desc:nth-child({i})
-        animation-name: animationStyle2
+        animation-name: ani-slide-from-left
         animation-duration: 700ms
         animation-delay 700ms * i - 500ms
         animation-timing-function: ease-in-out
@@ -90,20 +91,10 @@
 
   .animateClass
     .icons-wrapper
-      animation-name: animationStyle2
+      animation-name: ani-slide-from-left
       animation-duration: 700ms
       animation-delay: 3500ms
       animation-timing-function: ease-in-out
       animation-fill-mode: forwards
 
-  @keyframes animationStyle2
-    0%
-      opacity: 0;
-      transform: translate3d(300%, 0, 0)
-    80%
-      opacity 1
-      transform translate3d(-15%, 0, 0)
-    100%
-      opacity: 1;
-      transform: translate3d(0, 0, 0)
 </style>

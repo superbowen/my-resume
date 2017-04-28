@@ -1,7 +1,7 @@
 <template>
-  <div class="skills page">
+  <div class="skills page" :class="{'animateClass':pageIdx===2}">
     <h1 class="title">{{_data.skills.title}}</h1>
-    <div class="container" :class="{'animateClass':pageIdx===2}">
+    <div class="container">
       <div class="img-wrapper">
         <img src="../../assets/logo/html.png" alt="html" title="html">
       </div>
@@ -51,6 +51,7 @@
 </script>
 
 <style type="text/stylus" lang='stylus' rel='stylesheet/stylus' scoped>
+  @import '../../assets/animation.styl'
   .skills
     display: flex
     flex-direction: column
@@ -81,34 +82,29 @@
       text-align center
       font-size: .7rem
       width: 70%
+      opacity:0;
 
   .animateClass
-    for i in 1..10
-      .img-wrapper:nth-child({i})
-        animation-name: animationStyle1
-        animation-duration: 300ms * i + 500ms
-        animation-delay 500ms
-        animation-timing-function: ease-in-out
-        animation-fill-mode: forwards
-    & + p
-      animation-name: animationStyle2
-      animation-duration: 3.5s
+    .container
+      for i in 1..10
+        .img-wrapper:nth-child({i})
+          animation-name: ani-scroll-from-left
+          animation-duration: 300ms * i + 500ms
+          animation-delay 800ms
+          animation-timing-function: ease-in-out
+          animation-fill-mode: forwards
+    .title
+      animation-name: ani-slide-from-left
+      animation-duration: 1s
       animation-timing-function: ease-in-out
       animation-fill-mode: forwards
-
-  @keyframes animationStyle1
-    0%
-      opacity: 0;
-      transform: translate3d(100%, 0, 0) rotateZ(100deg)
-    40%
-      transform translate3d(-15%, 0, 0) rotateZ(-15deg)
-    60%
-      opacity: 1
-      transform translate3d(-15%, 0, 0) rotateZ(-15deg)
-    100%
-      opacity: 1;
-      transform: translate3d(0, 0, 0)
-
+    .desc
+      animation-name: ani-slide-from-left
+      animation-duration: 2s
+      animation-delay 1s
+      animation-timing-function: ease-in-out
+      animation-fill-mode: forwards
+      
   @media screen and (max-width: 1025px)
     .container
       width: 100% !important

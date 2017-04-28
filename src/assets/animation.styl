@@ -1,4 +1,4 @@
-@keyframes ani-slide-from-left
+@keyframes ani-slide-left
   0%
     opacity: 0;
     transform: translate3d(300%, 0, 0)
@@ -9,7 +9,7 @@
     opacity: 1;
     transform: translate3d(0, 0, 0)
 
-@keyframes ani-scroll-from-left
+@keyframes ani-scroll-left
   0%
     opacity: 0;
     transform: translate3d(100%, 0, 0) rotateZ(100deg)
@@ -21,3 +21,19 @@
   100%
     opacity: 1;
     transform: translate3d(0, 0, 0)
+
+@keyframes ani-little-slide-left
+  from
+    opacity: 0
+    transform translate3d(50%, 0, 0) scale(.5)
+  to
+    opacity: 1
+    transform translate3d(0, 0, 0) scale(1)
+
+@keyframes ani-little-slide-up
+  from
+    opacity: 0
+    transform translate3d(0, 15%, 0) scale(.8)
+  to
+    opacity: 1
+    transform translate3d(0, 0, 0) scale(1)

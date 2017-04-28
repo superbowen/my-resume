@@ -1,7 +1,7 @@
 <template>
-  <div class="projects page">
-    <h1 class="title">{{_data.projects.title}}</h1>
-    <div class="cards-wrapper" @touchstart.prevent="touchstart" @touchend.prevent="touchend">
+  <div class="projects page" :class="{'animateClass':pageIdx===1}">
+    <h1 class="title ani">{{_data.projects.title}}</h1>
+    <div class="cards-wrapper ani" @touchstart.prevent="touchstart" @touchend.prevent="touchend">
       <div class="card-wrapper"
            v-for="(project, i) in _data.projects.items"
            :class="{
@@ -12,7 +12,7 @@
         <card :project="project"></card>
       </div>
     </div>
-    <a href="https://github.com/superbowen" class="see-more" target="_blank">
+    <a href="https://github.com/superbowen" class="see-more ani" target="_blank">
       <i class="iconfont icon-github"></i>{{_data.projects.footerDesc}}
     </a>
   </div>
@@ -28,6 +28,9 @@
       },
       idx() {
         return this.$store.state.cardIdx
+      },
+      pageIdx() {
+        return this.$store.state.currentPage
       }
     },
     methods: {
@@ -66,6 +69,7 @@
 
 <style type="text/stylus" lang='stylus' rel='stylesheet/stylus' scoped>
   @import "../../assets/iconfont/iconfont.styl"
+  @import '../../assets/animation.styl'
 
   .projects
     display: flex;
@@ -102,6 +106,19 @@
         background: #333;
         color: #fff
         opacity: .6;
+
+
+  .ani
+    opacity: 0
+
+  .animateClass
+    for i in 1 2 3
+      .ani:nth-child({i})
+        animation-name ani-little-slide-up
+        animation-duration 1s
+        animation-delay: .5s * i
+        animation-timing-function ease
+        animation-fill-mode forwards
 
   @media screen and (min-width: 1365px)
     .title

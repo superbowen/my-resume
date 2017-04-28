@@ -134,6 +134,9 @@
   ::-webkit-scrollbar
     display: none;
 
+  .ani
+    opacity: 0
+
   html, body
     position: relative;
     height: 100%;
@@ -169,21 +172,6 @@
             text-align: center;
             text-shadow: 0 0 6px rgba(0, 0, 0, .2);
 
-  /*.swiper-box
-    width: 100%;
-    height: 100%;
-
-    .swiper-pagination
-      right: 20px !important;
-    .swiper-pagination-bullet
-      width: .5rem !important;
-      height: .5rem !important;
-      margin-top: .7rem !important;
-      transition: all .7s;
-      &.swiper-pagination-bullet-active
-        transform: scale(1.7);
-        transition: all .7s;
-        background: rgba(0, 0, 0, .4) !important;*/
 
   @media only screen and (min-width: 1367px)
   //destop

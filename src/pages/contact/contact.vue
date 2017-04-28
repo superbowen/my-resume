@@ -83,18 +83,14 @@
   .animateClass
     for i in 1..5
       .desc:nth-child({i})
-        animation-name: ani-slide-from-left
+        animation-name: ani-slide-left
         animation-duration: 700ms
         animation-delay 700ms * i - 500ms
-        animation-timing-function: ease-in-out
+        animation-timing-function: ease
         animation-fill-mode: forwards
 
   .animateClass
     .icons-wrapper
-      animation-name: ani-slide-from-left
-      animation-duration: 700ms
-      animation-delay: 3500ms
-      animation-timing-function: ease-in-out
-      animation-fill-mode: forwards
+      animation: ani-slide-left 700ms ease 3500ms 1 normal forwards
 
 </style>

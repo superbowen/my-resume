@@ -81,7 +81,7 @@
         },
         {
           "screenShot": "http://r.photo.store.qq.com/psb?/V11suuTk2IvA3D/johbKUF5Gc.RkEmhgFMRaN2rpP2X3uwKWIIu0kwTTmM!/r/dG4BAAAAAAAA",
-          "desc": "自行设计、独立开发的响应式线上简历（基于Vue.js），就是这个页面了，兼容pc和移动端鼠标、触摸操作，自适应多尺寸屏幕，无刷新切换语言，看看动画就行了，别太在意配色。",
+          "desc": "自行设计、独立开发的响应式线上简历（基于Vue.js），就是这个页面了，兼容pc和移动端鼠标、触摸操作，自适应多尺寸屏幕，无刷新切换语言，没有使用任何插件或动画库，纯手写。",
           "site": "",
           "qrcode": "http://r.photo.store.qq.com/psb?/V11suuTk2IvA3D/dbhN247o*aGoM7VEdZ0JtCMjgOimhOyE0FpJul2X3YI!/r/dPYAAAAAAAAA"
         },

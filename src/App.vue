@@ -163,7 +163,7 @@
           opacity: 0
         .page
           height: 100%;
-          padding: 40px;
+          padding: 1.5rem;
           font-size: 1rem
           .title
             line-height: 80px;

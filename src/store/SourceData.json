@@ -23,22 +23,22 @@
       "footerDesc": "See more on Github",
       "items": [
         {
-          "screenShot": "http://r.photo.store.qq.com/psb?/V11suuTk2IvA3D/IABTVPQBkgYbheBolDTapJjycOaCG46WhOn61CGWn58!/r/dBgBAAAAAAAA",
-          "desc": "A SPA demo wrote when I first contact Vue, its complexity is not less than any small project. Technical difficulties include shopcart logic, review filter, menu linkage, route assignment and so on.",
-          "site": "https://github.com/superbowen/sell-test",
-          "qrcode": "http://r.photo.store.qq.com/psb?/V11suuTk2IvA3D/Yw3i.qs.CPqQjQ17pSu5C.8xOz8hfh5WiMHu7.nSAW8!/r/dB8BAAAAAAAA"
+          "screenShot": "http://bowen.cool/static/img/proj-music.jpg",
+          "desc": "An online music player (based on Vue.js) depended on muse-ui component library, using Ajax jsonp to implemente search and play functions and localStorage to store the playlist.",
+          "site": "https://github.com/superbowen/my-music",
+          "qrcode": "http://bowen.cool/static/img/qr-music.png"
         },
         {
-          "screenShot": "http://r.photo.store.qq.com/psb?/V11suuTk2IvA3D/johbKUF5Gc.RkEmhgFMRaN2rpP2X3uwKWIIu0kwTTmM!/r/dG4BAAAAAAAA",
-          "desc": "The online responsive resume designed of my own,compatible with PC and mobile mouse,keyboard and touch operation,adaptive multi size screen,switch language with no fresh.",
-          "site": "",
-          "qrcode": "http://r.photo.store.qq.com/psb?/V11suuTk2IvA3D/dbhN247o*aGoM7VEdZ0JtCMjgOimhOyE0FpJul2X3YI!/r/dPYAAAAAAAAA"
+          "screenShot": "http://bowen.cool/static/img/proj-resume.jpg",
+          "desc": "The online responsive resume designed of my own with no use of any plugin, compatible with PC and mobile mouse and touch operation, adaptive multi size screen, switch language with no fresh.",
+          "site": "https://github.com/superbowen/my-resume",
+          "qrcode": "http://bowen.cool/static/img/qr-resume.png"
         },
         {
-          "screenShot": "http://r.photo.store.qq.com/psb?/V11suuTk2IvA3D/IABTVPQBkgYbheBolDTapJjycOaCG46WhOn61CGWn58!/r/dBgBAAAAAAAA",
+          "screenShot": "http://bowen.cool/static/img/proj-sell.jpg",
           "desc": "A SPA demo wrote when I first contact Vue, its complexity is not less than any small project. Technical difficulties include shopcart logic, review filter, menu linkage, route assignment and so on.",
           "site": "https://github.com/superbowen/sell-test",
-          "qrcode": "http://r.photo.store.qq.com/psb?/V11suuTk2IvA3D/Yw3i.qs.CPqQjQ17pSu5C.8xOz8hfh5WiMHu7.nSAW8!/r/dB8BAAAAAAAA"
+          "qrcode": "http://bowen.cool/static/img/qr-sell.png"
         }
       ]
     },
@@ -74,22 +74,22 @@
       "footerDesc": "在Github上查看更多",
       "items": [
         {
-          "screenShot": "http://r.photo.store.qq.com/psb?/V11suuTk2IvA3D/IABTVPQBkgYbheBolDTapJjycOaCG46WhOn61CGWn58!/r/dBgBAAAAAAAA",
-          "desc": "第一次接触Vue时写的单页应用demo，其复杂程度不低于一个小型项目。技术难点包含购物车增删改查、评论筛选、左右菜单联动、路由及子路由分配等等。",
-          "site": "https://github.com/superbowen/sell-test",
-          "qrcode": "http://r.photo.store.qq.com/psb?/V11suuTk2IvA3D/Yw3i.qs.CPqQjQ17pSu5C.8xOz8hfh5WiMHu7.nSAW8!/r/dB8BAAAAAAAA"
+          "screenShot": "http://bowen.cool/static/img/proj-music.jpg",
+          "desc": "一款线上音乐播放器（基于Vue.js），使用了muse-ui组件库，利用Ajax跨域请求实现搜索及播放功能，用localStorage储存播放历史列表。",
+          "site": "https://github.com/superbowen/my-music",
+          "qrcode": "http://bowen.cool/static/img/qr-music.png"
         },
         {
-          "screenShot": "http://r.photo.store.qq.com/psb?/V11suuTk2IvA3D/johbKUF5Gc.RkEmhgFMRaN2rpP2X3uwKWIIu0kwTTmM!/r/dG4BAAAAAAAA",
+          "screenShot": "http://bowen.cool/static/img/proj-resume.jpg",
           "desc": "自行设计、独立开发的响应式线上简历（基于Vue.js），就是这个页面了，兼容pc和移动端鼠标、触摸操作，自适应多尺寸屏幕，无刷新切换语言，没有使用任何插件或动画库，纯手写。",
           "site": "",
-          "qrcode": "http://r.photo.store.qq.com/psb?/V11suuTk2IvA3D/dbhN247o*aGoM7VEdZ0JtCMjgOimhOyE0FpJul2X3YI!/r/dPYAAAAAAAAA"
+          "qrcode": "http://bowen.cool/static/img/qr-resume.png"
         },
         {
-          "screenShot": "http://r.photo.store.qq.com/psb?/V11suuTk2IvA3D/IABTVPQBkgYbheBolDTapJjycOaCG46WhOn61CGWn58!/r/dBgBAAAAAAAA",
+          "screenShot": "http://bowen.cool/static/img/proj-sell.jpg",
           "desc": "第一次接触Vue时写的Web App demo，其复杂程度不低于一个小型项目。技术难点包含购物车增删改查、评论筛选、左右菜单联动、路由及子路由分配等等。",
           "site": "https://github.com/superbowen/sell-test",
-          "qrcode": "http://r.photo.store.qq.com/psb?/V11suuTk2IvA3D/Yw3i.qs.CPqQjQ17pSu5C.8xOz8hfh5WiMHu7.nSAW8!/r/dB8BAAAAAAAA"
+          "qrcode": "http://bowen.cool/static/img/qr-sell.png"
         }
       ]
     },

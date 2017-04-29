@@ -1,7 +1,7 @@
 <template>
   <div class="projects page" :class="{'animateClass':pageIdx===1}">
     <h1 class="title ani">{{_data.projects.title}}</h1>
-    <div class="cards-wrapper ani" @touchstart.prevent="touchstart" @touchend.prevent="touchend">
+    <div class="cards-wrapper ani" @touchstart="touchstart" @touchend="touchend">
       <div class="card-wrapper"
            v-for="(project, i) in _data.projects.items"
            :class="{

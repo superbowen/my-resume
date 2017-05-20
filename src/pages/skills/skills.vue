@@ -64,7 +64,7 @@
       justify-content: space-around
       flex-wrap: wrap
       .img-wrapper
-        background: rgba(255, 255, 255, .5)
+        background: rgba(255, 255, 255, .4)
         transition all .3s
         border-radius 50%
         cursor: pointer

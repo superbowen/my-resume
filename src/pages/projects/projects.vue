@@ -90,7 +90,7 @@
       margin: 1.2rem 0
       font-size: .8rem
       color: #333
-      border: 1px solid #333;
+      border: 1px solid rgba(51,51,51,.6);
       background: transparent;
       border-radius: 4px;
       text-decoration none
@@ -103,9 +103,8 @@
         font-size: 1rem
         margin-right: .3rem
       &:hover
-        background: #333;
+        background: rgba(51,51,51,.6);
         color: #fff
-        opacity: .6;
 
 
   .ani

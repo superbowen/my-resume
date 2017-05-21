@@ -2,7 +2,7 @@
   <div id="app" @touchstart="touchstart" @touchend="touchend">
 
     <div class="bg" id="bg" ref="bg">
-      <img src="./assets/img/bg.jpg" alt="a cool bg" width="1920" height="2664">
+      <img src="../static/img/bg.jpg" alt="a cool bg" width="1920" height="2664">
     </div>
 
     <lang-controller></lang-controller>
